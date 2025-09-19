@@ -175,6 +175,174 @@
   margin-top: var(--space-12);
 }
 
+/* Waitlist Form Styles */
+.waitlist-container {
+  max-width: 500px;
+  margin: 0 auto var(--space-12) auto;
+}
+
+.waitlist-form {
+  background: var(--wellness-card);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-lg);
+  border: 2px solid var(--wellness-accent);
+}
+
+.form-content {
+  text-align: center;
+}
+
+.email-input-container {
+  display: flex;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.email-input {
+  flex: 1;
+  padding: var(--space-4);
+  border: 2px solid rgba(139, 195, 74, 0.3);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-base);
+  font-family: var(--font-primary);
+  background: var(--wellness-bg);
+  color: var(--wellness-primary-text);
+  transition: var(--transition-base);
+}
+
+.email-input:focus {
+  outline: none;
+  border-color: var(--wellness-accent);
+  box-shadow: 0 0 0 3px rgba(139, 195, 74, 0.1);
+}
+
+.email-input::placeholder {
+  color: var(--wellness-secondary-text);
+}
+
+.waitlist-button {
+  padding: var(--space-4) var(--space-6);
+  background: var(--wellness-accent);
+  color: white;
+  border: none;
+  border-radius: var(--radius-lg);
+  font-size: var(--font-base);
+  font-weight: var(--font-semibold);
+  font-family: var(--font-primary);
+  cursor: pointer;
+  transition: var(--transition-base);
+  white-space: nowrap;
+}
+
+.waitlist-button:hover:not(:disabled) {
+  background: #7CB342;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.waitlist-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.form-disclaimer {
+  font-size: var(--font-sm);
+  color: var(--wellness-secondary-text);
+  margin: 0;
+  line-height: var(--line-relaxed);
+}
+
+.error-message {
+  background: #ffebee;
+  color: #c62828;
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: var(--font-sm);
+  margin-bottom: var(--space-3);
+  border: 1px solid #ef5350;
+}
+
+/* Success Message */
+.success-message {
+  background: var(--wellness-card);
+  border-radius: var(--radius-xl);
+  padding: var(--space-10);
+  box-shadow: var(--shadow-lg);
+  border: 2px solid var(--wellness-accent);
+  text-align: center;
+}
+
+.success-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--wellness-accent);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-2xl);
+  font-weight: var(--font-bold);
+  margin: 0 auto var(--space-4) auto;
+}
+
+.success-message h3 {
+  font-size: var(--font-xl);
+  font-weight: var(--font-bold);
+  color: var(--wellness-primary-text);
+  margin: 0 0 var(--space-3) 0;
+}
+
+.success-message p {
+  font-size: var(--font-base);
+  color: var(--wellness-secondary-text);
+  margin: 0;
+  line-height: var(--line-relaxed);
+}
+
+/* Coming Soon Badge */
+.coming-soon-badge {
+  text-align: center;
+  margin-top: var(--space-8);
+}
+
+.badge-content {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  background: var(--wellness-card);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(139, 195, 74, 0.2);
+}
+
+.badge-text {
+  font-size: var(--font-base);
+  color: var(--wellness-secondary-text);
+  font-weight: var(--font-medium);
+}
+
+.store-badges {
+  display: flex;
+  gap: var(--space-6);
+}
+
+.store-badge {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  background: rgba(139, 195, 74, 0.1);
+  border-radius: var(--radius-lg);
+  color: var(--wellness-primary-text);
+  font-size: var(--font-sm);
+  font-weight: var(--font-medium);
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -215,6 +383,29 @@
 
   .price-main {
     font-size: var(--font-3xl);
+  }
+
+  /* Waitlist Responsive */
+  .waitlist-form {
+    padding: var(--space-6);
+  }
+
+  .email-input-container {
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .waitlist-button {
+    width: 100%;
+  }
+
+  .store-badges {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  .store-badge {
+    justify-content: center;
   }
 }
 
