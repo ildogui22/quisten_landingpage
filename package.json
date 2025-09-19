@@ -11,7 +11,7 @@
   ],
   "author": "Quisten Team",
   "license": "MIT",
-  "homepage": "https://guidogiudici.github.io/landing_page",
+  "homepage": "/quisten_landingpage",
   "dependencies": {
     "@supabase/supabase-js": "^2.57.4",
     "react": "^18.2.0",
