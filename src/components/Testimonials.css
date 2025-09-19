@@ -1,0 +1,462 @@
+/* Testimonials Section Styles */
+.testimonials {
+  background: linear-gradient(180deg,
+    rgba(139, 195, 74, 0.05) 0%,
+    var(--wellness-bg) 50%,
+    rgba(139, 195, 74, 0.05) 100%);
+  position: relative;
+}
+
+.testimonials-header {
+  text-align: center;
+  margin-bottom: var(--space-16);
+}
+
+.testimonials-title {
+  font-size: clamp(var(--font-2xl), 4vw, var(--font-4xl));
+  font-weight: var(--font-bold);
+  margin-bottom: var(--space-6);
+  color: var(--wellness-primary-text);
+}
+
+.testimonials-subtitle {
+  font-size: var(--font-lg);
+  line-height: var(--line-relaxed);
+  color: var(--wellness-secondary-text);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Testimonials Carousel */
+.testimonials-carousel {
+  margin-bottom: var(--space-20);
+  position: relative;
+}
+
+.testimonial-container {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.testimonial-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.6s ease;
+  pointer-events: none;
+}
+
+.testimonial-card.active {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.testimonial-content {
+  background: var(--wellness-card);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-10);
+  box-shadow: var(--shadow-xl);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.quote-mark {
+  font-size: 4rem;
+  color: var(--wellness-accent);
+  font-family: Georgia, serif;
+  line-height: 1;
+  position: absolute;
+  top: var(--space-6);
+  left: var(--space-8);
+  opacity: 0.3;
+}
+
+.testimonial-quote {
+  font-size: var(--font-lg);
+  line-height: var(--line-relaxed);
+  color: var(--wellness-primary-text);
+  font-style: italic;
+  margin: var(--space-8) 0 var(--space-6) 0;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Author Info */
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+  padding: var(--space-4);
+  background: rgba(139, 195, 74, 0.05);
+  border-radius: var(--radius-lg);
+}
+
+.author-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-2xl);
+  flex-shrink: 0;
+}
+
+.author-info {
+  flex: 1;
+}
+
+.author-name {
+  font-size: var(--font-lg);
+  font-weight: var(--font-semibold);
+  color: var(--wellness-primary-text);
+  margin-bottom: var(--space-1);
+}
+
+.author-details {
+  font-size: var(--font-base);
+  color: var(--wellness-secondary-text);
+  margin-bottom: var(--space-2);
+}
+
+.author-rating {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.stars {
+  color: #FFD700;
+  font-size: var(--font-base);
+}
+
+/* Testimonial Stats */
+.testimonial-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.stat-item {
+  text-align: center;
+  padding: var(--space-3);
+  background: var(--wellness-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(139, 195, 74, 0.2);
+}
+
+.stat-label {
+  display: block;
+  font-size: var(--font-sm);
+  color: var(--wellness-secondary-text);
+  margin-bottom: var(--space-1);
+}
+
+.stat-value {
+  display: block;
+  font-size: var(--font-base);
+  font-weight: var(--font-semibold);
+  color: var(--wellness-accent);
+}
+
+/* Carousel Navigation */
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-top: var(--space-8);
+}
+
+.nav-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(139, 195, 74, 0.3);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.nav-dot.active {
+  background: var(--wellness-accent);
+  transform: scale(1.2);
+}
+
+.nav-dot:hover {
+  background: var(--wellness-accent);
+  opacity: 0.8;
+}
+
+/* Clinical Evidence */
+.clinical-evidence {
+  margin-bottom: var(--space-20);
+}
+
+.evidence-title {
+  font-size: var(--font-2xl);
+  font-weight: var(--font-semibold);
+  color: var(--wellness-primary-text);
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-8);
+}
+
+.evidence-card {
+  background: var(--wellness-card);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  transition: var(--transition-base);
+}
+
+.evidence-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.evidence-icon {
+  font-size: var(--font-3xl);
+  margin-bottom: var(--space-4);
+}
+
+.evidence-card-title {
+  font-size: var(--font-xl);
+  font-weight: var(--font-semibold);
+  color: var(--wellness-primary-text);
+  margin-bottom: var(--space-3);
+}
+
+.evidence-description {
+  font-size: var(--font-base);
+  color: var(--wellness-secondary-text);
+  line-height: var(--line-relaxed);
+  margin-bottom: var(--space-6);
+}
+
+.evidence-stats {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.evidence-stat-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-2) 0;
+  font-size: var(--font-base);
+  color: var(--wellness-primary-text);
+}
+
+.stat-bullet {
+  color: var(--wellness-accent);
+  font-weight: var(--font-bold);
+}
+
+/* App Store Reviews */
+.app-reviews {
+  margin-bottom: var(--space-20);
+}
+
+.reviews-title {
+  font-size: var(--font-2xl);
+  font-weight: var(--font-semibold);
+  color: var(--wellness-primary-text);
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-6);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.review-card {
+  background: var(--wellness-card);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-base);
+}
+
+.review-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-3);
+}
+
+.platform-name {
+  font-size: var(--font-lg);
+  font-weight: var(--font-semibold);
+  color: var(--wellness-primary-text);
+}
+
+.review-rating {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.rating-stars {
+  color: #FFD700;
+  font-size: var(--font-base);
+}
+
+.rating-number {
+  font-size: var(--font-base);
+  font-weight: var(--font-semibold);
+  color: var(--wellness-primary-text);
+}
+
+.review-count {
+  font-size: var(--font-base);
+  color: var(--wellness-secondary-text);
+  margin-bottom: var(--space-4);
+}
+
+.review-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.highlight-tag {
+  background: rgba(139, 195, 74, 0.1);
+  color: var(--wellness-accent);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font-size: var(--font-sm);
+  font-weight: var(--font-medium);
+}
+
+/* Success Metrics */
+.success-metrics {
+  background: var(--wellness-card);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-12);
+  box-shadow: var(--shadow-lg);
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-8);
+}
+
+.metric-card {
+  text-align: center;
+}
+
+.metric-number {
+  font-size: clamp(var(--font-3xl), 5vw, var(--font-5xl));
+  font-weight: var(--font-bold);
+  color: var(--wellness-accent);
+  line-height: 1;
+  margin-bottom: var(--space-2);
+}
+
+.metric-label {
+  font-size: var(--font-lg);
+  font-weight: var(--font-semibold);
+  color: var(--wellness-primary-text);
+  margin-bottom: var(--space-1);
+}
+
+.metric-note {
+  font-size: var(--font-base);
+  color: var(--wellness-secondary-text);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .testimonial-content {
+    padding: var(--space-6);
+  }
+
+  .quote-mark {
+    font-size: 3rem;
+    top: var(--space-4);
+    left: var(--space-4);
+  }
+
+  .testimonial-quote {
+    font-size: var(--font-base);
+    margin: var(--space-6) 0 var(--space-4) 0;
+  }
+
+  .testimonial-author {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-3);
+  }
+
+  .testimonial-stats {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  .evidence-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+}
+
+@media (max-width: 640px) {
+  .testimonial-container {
+    height: 450px;
+  }
+
+  .author-avatar {
+    width: 50px;
+    height: 50px;
+    font-size: var(--font-xl);
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .success-metrics {
+    padding: var(--space-8);
+  }
+}

@@ -1,0 +1,75 @@
+/* Hero Section Updates */
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 500px;
+  padding-right: 1rem;
+}
+
+.hero-visual {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+.dual-phone-mockup {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone-container {
+  position: relative;
+  max-width: 250px;
+  width: 100%;
+}
+
+.phone-left {
+  z-index: 1;
+  margin-right: -50px; /* Overlap the phones slightly */
+}
+
+.phone-right {
+  z-index: 2;
+}
+
+.screenshot-image {
+  width: 100%;
+  height: auto;
+  border-radius: 25px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+  }
+  
+  .hero-text,
+  .hero-visual {
+    padding: 0;
+  }
+  
+  .phone-left {
+    margin-right: -30px;
+  }
+  
+  .phone-container {
+    max-width: 200px;
+  }
+}
