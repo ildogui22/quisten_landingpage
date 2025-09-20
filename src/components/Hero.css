@@ -428,11 +428,51 @@
   }
 }
 
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: var(--space-4) 0;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    text-align: center;
+    min-height: auto;
+  }
+
+  .hero-text {
+    text-align: center;
+    order: 2;
+  }
+
+  .hero-visual {
+    order: 1;
+    margin-bottom: var(--space-4);
+  }
+
+  .dual-phone-mockup {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .phone-container {
+    width: 180px;
+    height: 380px;
+  }
+
+  .phone-right {
+    margin-left: -2rem;
+    margin-top: var(--space-4);
+  }
+}
+
 @media (max-width: 640px) {
   .hero-nav {
     flex-direction: column;
     gap: var(--space-3);
     text-align: center;
+    margin-bottom: var(--space-6);
   }
 
   .nav-brand .brand-name {
@@ -441,26 +481,99 @@
 
   .nav-actions {
     gap: var(--space-2);
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .nav-btn {
-    padding: var(--space-2) var(--space-3);
-    font-size: var(--font-xs);
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--font-sm);
+    min-height: 44px;
+    min-width: 120px;
+  }
+
+  .hero-title {
+    font-size: clamp(var(--font-2xl), 8vw, var(--font-3xl));
+    margin-bottom: var(--space-4);
+  }
+
+  .hero-subtitle {
+    font-size: var(--font-base);
+    margin-bottom: var(--space-6);
+    padding: 0 var(--space-2);
   }
 
   .hero-cta {
     flex-direction: column;
     align-items: center;
+    gap: var(--space-3);
   }
 
   .hero-cta-primary,
   .hero-cta-secondary {
     width: 100%;
-    max-width: 300px;
+    max-width: 280px;
+    min-height: 50px;
+  }
+
+  .dual-phone-mockup {
+    max-width: 280px;
+  }
+
+  .phone-container {
+    width: 140px;
+    height: 300px;
+  }
+
+  .phone-right {
+    margin-left: -1.5rem;
+    margin-top: var(--space-3);
   }
 
   .trust-indicators {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-3);
+    margin-top: var(--space-6);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-container {
+    padding: 0 var(--space-2);
+  }
+
+  .nav-brand .brand-name {
+    font-size: 2rem;
+  }
+
+  .nav-actions {
+    width: 100%;
+  }
+
+  .nav-btn {
+    flex: 1;
+    max-width: 140px;
+  }
+
+  .dual-phone-mockup {
+    max-width: 240px;
+  }
+
+  .phone-container {
+    width: 120px;
+    height: 260px;
+  }
+
+  .phone-right {
+    margin-left: -1rem;
+    margin-top: var(--space-2);
+  }
+
+  .hero-title {
+    font-size: clamp(var(--font-xl), 7vw, var(--font-2xl));
+  }
+
+  .hero-subtitle {
+    font-size: var(--font-sm);
   }
 }

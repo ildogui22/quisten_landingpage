@@ -171,12 +171,24 @@ img {
 
 /* Sections */
 section {
-  padding: var(--space-6) 0; /* Further reduced vertical padding */
+  padding: var(--space-4) 0; /* Mobile-first approach */
+}
+
+@media (min-width: 640px) {
+  section {
+    padding: var(--space-6) 0;
+  }
 }
 
 @media (min-width: 768px) {
   section {
-    padding: var(--space-8) 0; /* Further reduced vertical padding */
+    padding: var(--space-8) 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  section {
+    padding: var(--space-10) 0;
   }
 }
 
@@ -291,6 +303,89 @@ section {
   outline-offset: 2px;
 }
 
+/* Touch target optimization for mobile */
+@media (max-width: 768px) {
+  button,
+  .btn,
+  a[role="button"],
+  input[type="submit"],
+  input[type="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Mobile typography enhancements */
+  body {
+    font-size: var(--font-base);
+    line-height: var(--line-relaxed);
+  }
+
+  h1 {
+    font-size: clamp(var(--font-2xl), 6vw, var(--font-4xl));
+    line-height: var(--line-tight);
+    margin-bottom: var(--space-3);
+  }
+
+  h2 {
+    font-size: clamp(var(--font-xl), 5vw, var(--font-3xl));
+    margin-bottom: var(--space-3);
+  }
+
+  h3 {
+    font-size: clamp(var(--font-lg), 4vw, var(--font-2xl));
+    margin-bottom: var(--space-2);
+  }
+
+  p {
+    margin-bottom: var(--space-3);
+    line-height: var(--line-relaxed);
+  }
+
+  /* Improved spacing for mobile */
+  .container {
+    padding: 0 var(--space-3);
+  }
+
+  /* Better button spacing */
+  .btn {
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--font-base);
+  }
+
+  .btn-large {
+    padding: var(--space-4) var(--space-6);
+    font-size: var(--font-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 var(--space-4);
+  }
+
+  /* Extra small screen optimizations */
+  body {
+    font-size: var(--font-sm);
+  }
+
+  h1 {
+    font-size: clamp(var(--font-xl), 7vw, var(--font-3xl));
+  }
+
+  h2 {
+    font-size: clamp(var(--font-lg), 6vw, var(--font-2xl));
+  }
+
+  h3 {
+    font-size: clamp(var(--font-base), 5vw, var(--font-xl));
+  }
+
+  .btn {
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--font-sm);
+  }
+}
+
 /* High contrast mode support */
 @media (prefers-contrast: high) {
   .card {
@@ -300,5 +395,28 @@ section {
   .btn-primary {
     background: var(--wellness-primary-text);
     border: 2px solid var(--wellness-primary-text);
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Mobile landscape optimizations */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  section {
+    padding: var(--space-3) 0;
+  }
+
+  .hero {
+    min-height: auto;
   }
 }

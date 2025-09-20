@@ -347,47 +347,33 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .download {
-    padding: var(--space-4) 0;
+    padding: var(--space-6) 0;
+    min-height: auto;
   }
 
   .download-header {
     margin-bottom: var(--space-8);
+    padding: 0 var(--space-2);
   }
 
   .download-title {
     font-size: clamp(var(--font-xl), 6vw, var(--font-3xl));
   }
 
-  .pricing-comparison {
-    grid-template-columns: 1fr;
-    gap: var(--space-6);
-    max-width: 500px;
+  .download-subtitle {
+    font-size: var(--font-base);
+    padding: 0 var(--space-2);
   }
 
-  .plan-card {
-    padding: var(--space-6);
+  /* Waitlist Container */
+  .waitlist-container {
+    padding: 0 var(--space-2);
   }
 
-  .plan-card.premium-plan {
-    transform: none;
-    order: -1;
-  }
-
-  .plan-card.premium-plan:hover {
-    transform: translateY(-4px);
-  }
-
-  .plan-title {
-    font-size: var(--font-xl);
-  }
-
-  .price-main {
-    font-size: var(--font-3xl);
-  }
-
-  /* Waitlist Responsive */
   .waitlist-form {
     padding: var(--space-6);
+    margin: 0 auto;
+    max-width: 500px;
   }
 
   .email-input-container {
@@ -395,8 +381,47 @@
     gap: var(--space-4);
   }
 
+  .email-input {
+    width: 100%;
+    font-size: var(--font-base);
+    padding: var(--space-4);
+    min-height: 50px;
+  }
+
   .waitlist-button {
     width: 100%;
+    min-height: 50px;
+    font-size: var(--font-base);
+  }
+
+  .form-disclaimer {
+    text-align: center;
+    font-size: var(--font-sm);
+  }
+
+  /* Success Message */
+  .success-message {
+    padding: var(--space-6);
+    text-align: center;
+  }
+
+  .success-message h3 {
+    font-size: var(--font-lg);
+    margin-bottom: var(--space-2);
+  }
+
+  .success-message p {
+    font-size: var(--font-base);
+  }
+
+  /* Coming Soon Badge */
+  .coming-soon-badge {
+    margin-top: var(--space-8);
+    padding: 0 var(--space-2);
+  }
+
+  .badge-content {
+    padding: var(--space-4);
   }
 
   .store-badges {
@@ -406,6 +431,7 @@
 
   .store-badge {
     justify-content: center;
+    padding: var(--space-2) var(--space-3);
   }
 }
 
@@ -938,35 +964,94 @@
 }
 
 @media (max-width: 640px) {
-  .app-store-buttons {
-    flex-direction: column;
-    align-items: center;
+  .download {
+    padding: var(--space-4) 0;
   }
 
-  .app-store-button {
-    width: 100%;
-    max-width: 250px;
+  .download-header {
+    margin-bottom: var(--space-6);
+    padding: 0 var(--space-3);
   }
 
-  .pricing-cards {
-    grid-template-columns: 1fr;
-    gap: var(--space-4);
+  .download-title {
+    font-size: clamp(var(--font-lg), 7vw, var(--font-2xl));
   }
 
-  .pricing-card.featured {
-    transform: none;
+  .download-subtitle {
+    font-size: var(--font-sm);
+    padding: 0 var(--space-3);
   }
 
-  .phone-showcase {
-    max-width: 250px;
+  .waitlist-container {
+    padding: 0 var(--space-3);
   }
 
-  .trust-indicators {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-4);
+  .waitlist-form {
+    padding: var(--space-4);
   }
 
-  .cta-content {
-    padding: var(--space-8);
+  .email-input {
+    padding: var(--space-3);
+    font-size: var(--font-sm);
+  }
+
+  .waitlist-button {
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--font-sm);
+  }
+
+  .coming-soon-badge {
+    margin-top: var(--space-6);
+    padding: 0 var(--space-3);
+  }
+
+  .badge-content {
+    padding: var(--space-3);
+  }
+
+  .badge-text {
+    font-size: var(--font-sm);
+  }
+
+  .store-badge {
+    padding: var(--space-2);
+    font-size: var(--font-xs);
+  }
+}
+
+@media (max-width: 480px) {
+  .download-header {
+    padding: 0 var(--space-4);
+  }
+
+  .download-title {
+    font-size: clamp(var(--font-base), 6vw, var(--font-lg));
+  }
+
+  .download-subtitle {
+    font-size: var(--font-xs);
+    padding: 0 var(--space-4);
+  }
+
+  .waitlist-container {
+    padding: 0 var(--space-4);
+  }
+
+  .waitlist-form {
+    padding: var(--space-3);
+  }
+
+  .email-input {
+    padding: var(--space-2);
+    font-size: var(--font-xs);
+  }
+
+  .waitlist-button {
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--font-xs);
+  }
+
+  .coming-soon-badge {
+    padding: 0 var(--space-4);
   }
 }
