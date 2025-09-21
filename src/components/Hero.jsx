@@ -23,7 +23,7 @@ const Hero = () => {
         <div className="hero-content">
           <div className="hero-text">
             <h1 className="hero-title animate-fade-in-up">
-              Break Free
+              Break <span className="brand-styled">Free</span>
               <span className="text-gradient"> From Smoking</span>
             </h1>
             <p className="hero-subtitle animate-fade-in-up">

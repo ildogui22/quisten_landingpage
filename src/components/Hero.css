@@ -150,6 +150,14 @@
   display: inline-block;
 }
 
+.brand-styled {
+  font-family: var(--font-serif);
+  font-weight: var(--font-regular);
+  font-style: italic;
+  color: var(--wellness-primary-text);
+  letter-spacing: -0.02em;
+}
+
 .hero-subtitle {
   font-size: var(--font-lg);
   line-height: var(--line-relaxed);
