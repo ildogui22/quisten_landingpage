@@ -23,8 +23,7 @@ const Hero = () => {
         <div className="hero-content">
           <div className="hero-text">
             <h1 className="hero-title animate-fade-in-up">
-              Break <span className="brand-styled">Free</span>
-              <span className="text-gradient"> From Smoking</span>
+              Break <span className="text-gradient">Free</span> <span className="no-break">From <span className="brand-styled">Smoking</span></span>
             </h1>
             <p className="hero-subtitle animate-fade-in-up">
               Start an amazing journey and become a non smoker in 8 days, breaking the mental patterns that keep you smoking. Learn to manage cravings through cue exposure therapy backed by mindfulness techniques.

@@ -152,10 +152,15 @@
 
 .brand-styled {
   font-family: var(--font-serif);
+  font-size: inherit;
   font-weight: var(--font-regular);
   font-style: italic;
   color: var(--wellness-primary-text);
   letter-spacing: -0.02em;
+}
+
+.no-break {
+  white-space: nowrap;
 }
 
 .hero-subtitle {
