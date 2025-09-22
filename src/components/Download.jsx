@@ -8,12 +8,12 @@ const Download = () => {
         {/* Centered Header Section */}
         <div className="download-header">
           <h2 className="download-title">
-            Your Journey to
-            <span className="text-gradient"> Freedom Starts Now</span>
+            Your <span className="brand-name-text">Journey</span> to
+            <span className="text-gradient"> Freedom</span> Starts Now
           </h2>
           <p className="download-subtitle">
-            Join thousands who have successfully broken free from smoking cravings.
-            Download Quisten today and begin your mindful journey to freedom.
+            Complete your 8-day journey to break free from smoking and discover mindfulness techniques to manage cravings forever.
+            Download Quisten today and begin your transformation.
           </p>
         </div>
 
@@ -22,7 +22,7 @@ const Download = () => {
           {/* Free Plan Card */}
           <div className="plan-card free-plan">
             <div className="plan-header">
-              <h3 className="plan-title">Quisten Free</h3>
+              <h3 className="plan-title"><span className="brand-name-text">Quisten</span> Free</h3>
               <p className="plan-subtitle">Start your journey with essential tools</p>
             </div>
 
@@ -45,7 +45,7 @@ const Download = () => {
           {/* Premium Plan Card */}
           <div className="plan-card premium-plan">
             <div className="plan-header">
-              <h3 className="plan-title">Quisten Premium</h3>
+              <h3 className="plan-title"><span className="brand-name-text">Quisten</span> Premium</h3>
               <p className="plan-subtitle">Unlock your full potential</p>
             </div>
 
@@ -65,8 +65,19 @@ const Download = () => {
             </div>
 
             <div className="plan-price">
+              <span className="price-original">$19.99</span>
               <span className="price-main">$9.99</span>
               <span className="price-period">/month</span>
+            </div>
+            <div className="early-adopter-badge">
+              50% OFF for Early Adopters
+            </div>
+
+            {/* Value Proposition */}
+            <div className="value-proposition">
+              <p className="value-text">
+                One month is enough. For less than the cost of a pack of cigarettes, you'll never touch one again.
+              </p>
             </div>
 
           </div>
