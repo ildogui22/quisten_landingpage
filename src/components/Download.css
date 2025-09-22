@@ -160,8 +160,15 @@
 }
 
 .feature-icon.disabled {
-  background: #e0e0e0;
+  background: transparent;
   color: #999;
+  font-size: var(--font-xl);
+  width: 24px;
+  height: 24px;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .feature-text.disabled {
@@ -173,6 +180,21 @@
 .download-cta {
   text-align: center;
   margin-top: var(--space-12);
+}
+
+.app-store-badge {
+  display: inline-block;
+  transition: var(--transition-fast);
+}
+
+.app-store-badge:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.app-store-badge-image {
+  height: 60px;
+  width: auto;
 }
 
 /* Waitlist Form Styles */
@@ -300,6 +322,124 @@
   color: var(--wellness-secondary-text);
   margin: 0;
   line-height: var(--line-relaxed);
+}
+
+/* Pricing Container */
+.pricing-container {
+  max-width: 400px;
+  margin: 0 auto var(--space-8) auto;
+}
+
+.pricing-card {
+  background: var(--wellness-card);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-lg);
+  border: 2px solid var(--wellness-accent);
+  text-align: center;
+}
+
+.pricing-header {
+  margin-bottom: var(--space-6);
+}
+
+.pricing-title {
+  font-size: var(--font-xl);
+  font-weight: var(--font-bold);
+  color: var(--wellness-primary-text);
+  margin: 0 0 var(--space-4) 0;
+}
+
+.pricing-price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: var(--space-1);
+}
+
+.price-currency {
+  font-size: var(--font-lg);
+  color: var(--wellness-accent);
+  font-weight: var(--font-bold);
+}
+
+.price-amount {
+  font-size: var(--font-3xl);
+  font-weight: var(--font-bold);
+  color: var(--wellness-accent);
+}
+
+.price-period {
+  font-size: var(--font-base);
+  color: var(--wellness-secondary-text);
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.pricing-features li {
+  padding: var(--space-2) 0;
+  font-size: var(--font-base);
+  color: var(--wellness-primary-text);
+  position: relative;
+  padding-left: var(--space-6);
+}
+
+.pricing-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--wellness-accent);
+  font-weight: var(--font-bold);
+}
+
+/* Download Buttons */
+.download-buttons {
+  text-align: center;
+  margin-top: var(--space-8);
+}
+
+.app-store-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-6);
+  background: var(--wellness-primary-text);
+  color: white;
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  transition: var(--transition-fast);
+  font-family: var(--font-primary);
+}
+
+.app-store-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  color: white;
+  text-decoration: none;
+}
+
+.button-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.button-line1 {
+  font-size: var(--font-xs);
+  opacity: 0.9;
+  line-height: 1;
+}
+
+.button-line2 {
+  font-size: var(--font-base);
+  font-weight: var(--font-semibold);
+  line-height: 1.1;
 }
 
 /* Coming Soon Badge */
