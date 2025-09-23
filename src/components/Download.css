@@ -48,6 +48,14 @@
   margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+  .pricing-comparison {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+    max-width: 400px;
+  }
+}
+
 .plan-card {
   background: var(--wellness-card);
   border-radius: var(--radius-xl);
@@ -66,6 +74,16 @@
   border-color: var(--wellness-accent);
   transform: scale(1.05);
   box-shadow: var(--shadow-xl);
+}
+
+@media (max-width: 768px) {
+  .plan-card.premium-plan {
+    transform: none;
+  }
+
+  .plan-card.premium-plan:hover {
+    transform: translateY(-4px);
+  }
 }
 
 .plan-card:hover {
@@ -204,7 +222,32 @@
   width: auto;
 }
 
-/* Waitlist Form Styles */
+/* Waitlist Section Styles */
+.waitlist-section {
+  max-width: 600px;
+  margin: var(--space-12) auto;
+  text-align: center;
+}
+
+.waitlist-header {
+  margin-bottom: var(--space-8);
+}
+
+.waitlist-title {
+  font-size: var(--font-2xl);
+  font-weight: var(--font-bold);
+  color: var(--wellness-primary-text);
+  margin-bottom: var(--space-4);
+}
+
+.waitlist-subtitle {
+  font-size: var(--font-lg);
+  color: var(--wellness-secondary-text);
+  line-height: var(--line-relaxed);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
 .waitlist-container {
   max-width: 500px;
   margin: 0 auto var(--space-12) auto;
@@ -215,14 +258,12 @@
   border-radius: var(--radius-xl);
   padding: var(--space-8);
   box-shadow: var(--shadow-lg);
-  border: 2px solid var(--wellness-accent);
+  border: 2px solid rgba(139, 195, 74, 0.2);
+  max-width: 500px;
+  margin: 0 auto;
 }
 
-.form-content {
-  text-align: center;
-}
-
-.email-input-container {
+.form-group {
   display: flex;
   gap: var(--space-3);
   margin-bottom: var(--space-4);
@@ -274,6 +315,27 @@
   opacity: 0.6;
   cursor: not-allowed;
   transform: none;
+}
+
+.message {
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-sm);
+  font-weight: var(--font-medium);
+  text-align: center;
+  margin-top: var(--space-2);
+}
+
+.message.success {
+  background: rgba(139, 195, 74, 0.1);
+  color: var(--wellness-accent);
+  border: 1px solid rgba(139, 195, 74, 0.3);
+}
+
+.message.error {
+  background: #ffebee;
+  color: #c62828;
+  border: 1px solid #ef5350;
 }
 
 .form-disclaimer {
@@ -494,13 +556,17 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .download {
-    padding: var(--space-6) 0;
+    padding: var(--space-6) var(--space-4);
     min-height: auto;
+  }
+
+  .container {
+    padding: 0;
   }
 
   .download-header {
     margin-bottom: var(--space-8);
-    padding: 0 var(--space-2);
+    padding: 0;
   }
 
   .download-title {
@@ -509,12 +575,25 @@
 
   .download-subtitle {
     font-size: var(--font-base);
-    padding: 0 var(--space-2);
+    padding: 0;
   }
 
-  /* Waitlist Container */
+  /* Waitlist Section */
+  .waitlist-section {
+    margin: var(--space-8) auto;
+    padding: 0;
+  }
+
+  .waitlist-title {
+    font-size: var(--font-xl);
+  }
+
+  .waitlist-subtitle {
+    font-size: var(--font-base);
+  }
+
   .waitlist-container {
-    padding: 0 var(--space-2);
+    padding: 0;
   }
 
   .waitlist-form {
@@ -523,7 +602,7 @@
     max-width: 500px;
   }
 
-  .email-input-container {
+  .form-group {
     flex-direction: column;
     gap: var(--space-4);
   }
@@ -1145,12 +1224,12 @@
 
 @media (max-width: 640px) {
   .download {
-    padding: var(--space-4) 0;
+    padding: var(--space-4) var(--space-3);
   }
 
   .download-header {
     margin-bottom: var(--space-6);
-    padding: 0 var(--space-3);
+    padding: 0;
   }
 
   .download-title {
@@ -1159,11 +1238,23 @@
 
   .download-subtitle {
     font-size: var(--font-sm);
-    padding: 0 var(--space-3);
+    padding: 0;
+  }
+
+  .pricing-comparison {
+    max-width: 100%;
+  }
+
+  .plan-card {
+    padding: var(--space-4);
+  }
+
+  .waitlist-section {
+    margin: var(--space-6) auto;
   }
 
   .waitlist-container {
-    padding: 0 var(--space-3);
+    padding: 0;
   }
 
   .waitlist-form {
@@ -1200,8 +1291,12 @@
 }
 
 @media (max-width: 480px) {
+  .download {
+    padding: var(--space-3) var(--space-2);
+  }
+
   .download-header {
-    padding: 0 var(--space-4);
+    padding: 0;
   }
 
   .download-title {
@@ -1210,11 +1305,19 @@
 
   .download-subtitle {
     font-size: var(--font-xs);
-    padding: 0 var(--space-4);
+    padding: 0;
+  }
+
+  .plan-card {
+    padding: var(--space-3);
+  }
+
+  .waitlist-section {
+    margin: var(--space-4) auto;
   }
 
   .waitlist-container {
-    padding: 0 var(--space-4);
+    padding: 0;
   }
 
   .waitlist-form {
@@ -1222,16 +1325,16 @@
   }
 
   .email-input {
-    padding: var(--space-2);
-    font-size: var(--font-xs);
+    padding: var(--space-3);
+    font-size: var(--font-sm);
   }
 
   .waitlist-button {
-    padding: var(--space-2) var(--space-3);
-    font-size: var(--font-xs);
+    padding: var(--space-3);
+    font-size: var(--font-sm);
   }
 
   .coming-soon-badge {
-    padding: 0 var(--space-4);
+    padding: 0;
   }
 }
