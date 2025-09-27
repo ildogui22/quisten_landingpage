@@ -1,4 +1,5 @@
 import React from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Hero from './components/Hero';
 import HowItWorks from './components/HowItWorks';
 import Download from './components/Download';
@@ -11,6 +12,7 @@ function App() {
       <HowItWorks />
       <Download />
       <Footer />
+      <Analytics />
     </div>
   );
 }
