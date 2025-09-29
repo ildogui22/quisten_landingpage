@@ -1,38 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Download.css';
-import { supabase } from '../config/supabase';
 
 const Download = () => {
-  const [email, setEmail] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [message, setMessage] = useState('');
-
-  const handleWaitlistSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setMessage('');
-
-    try {
-      const { error } = await supabase
-        .from('waitlist')
-        .insert([{ email }]);
-
-      if (error) {
-        if (error.code === '23505') {
-          setMessage('You\'re already on our waitlist!');
-        } else {
-          setMessage('Something went wrong. Please try again.');
-        }
-      } else {
-        setMessage('Thanks! We will send you a promo code to redeem the app for free via email soon.');
-        setEmail('');
-      }
-    } catch (err) {
-      setMessage('Something went wrong. Please try again.');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   return (
     <section id="download" className="download">
@@ -102,7 +71,7 @@ const Download = () => {
               <span className="price-period">/month</span>
             </div>
             <div className="early-adopter-badge">
-              First 100 Users Get 100% OFF - Completely FREE!
+              Limited Time: 50% OFF!
             </div>
 
             {/* Value Proposition */}
@@ -115,41 +84,6 @@ const Download = () => {
           </div>
         </div>
 
-        {/* Waitlist Form */}
-        <div className="waitlist-section">
-          <div className="waitlist-header">
-            <h3 className="waitlist-title">Get the App 100% FREE</h3>
-            <p className="waitlist-subtitle">
-              The first 100 users get completely FREE access to Quisten - no payment required! Join now to secure your free spot.
-            </p>
-          </div>
-
-          <form onSubmit={handleWaitlistSubmit} className="waitlist-form">
-            <div className="form-group">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email address"
-                required
-                className="email-input"
-                disabled={isSubmitting}
-              />
-              <button
-                type="submit"
-                disabled={isSubmitting || !email}
-                className="waitlist-button"
-              >
-                {isSubmitting ? 'Joining...' : 'Join Waitlist'}
-              </button>
-            </div>
-            {message && (
-              <div className={`message ${message.includes('Thanks') ? 'success' : 'error'}`}>
-                {message}
-              </div>
-            )}
-          </form>
-        </div>
 
         {/* Centered App Store Button */}
         <div className="download-cta">
