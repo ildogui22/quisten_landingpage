@@ -2,10 +2,10 @@
 .download {
   background: var(--gradient-hero);
   position: relative;
-  min-height: 100vh;
+  min-height: 60vh;
   display: flex;
   align-items: center;
-  padding: var(--space-6) 0;
+  padding: var(--space-12) 0 var(--space-8) 0;
 }
 
 /* Download Header */
@@ -18,9 +18,9 @@
 }
 
 .download-title {
-  font-size: clamp(var(--font-2xl), 5vw, var(--font-4xl));
+  font-size: clamp(var(--font-3xl), 6vw, var(--font-5xl));
   font-weight: var(--font-bold);
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-8);
   color: var(--wellness-primary-text);
 }
 
@@ -29,11 +29,11 @@
 }
 
 .download-subtitle {
-  font-size: var(--font-lg);
+  font-size: var(--font-xl);
   line-height: var(--line-relaxed);
   color: var(--wellness-secondary-text);
-  margin-bottom: var(--space-8);
-  max-width: 800px;
+  margin-bottom: var(--space-10);
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -204,7 +204,7 @@
 /* Download CTA */
 .download-cta {
   text-align: center;
-  margin-top: var(--space-12);
+  margin-top: var(--space-10);
 }
 
 .app-store-badge {
@@ -218,7 +218,7 @@
 }
 
 .app-store-badge-image {
-  height: 60px;
+  height: 80px;
   width: auto;
 }
 
@@ -1287,6 +1287,73 @@
   .store-badge {
     padding: var(--space-2);
     font-size: var(--font-xs);
+  }
+}
+
+/* Footer Styles */
+.footer {
+  background: var(--wellness-bg);
+  padding: var(--space-6) 0 var(--space-4) 0;
+  margin-top: 0;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+/* Footer Links */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-6);
+  margin-bottom: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.footer-link {
+  font-size: var(--font-base);
+  color: var(--wellness-secondary-text);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.footer-link:hover {
+  color: var(--wellness-accent);
+  text-decoration: none;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid rgba(139, 195, 74, 0.2);
+  padding-top: var(--space-4);
+}
+
+.copyright {
+  font-size: var(--font-sm);
+  color: var(--wellness-secondary-text);
+  margin: 0 0 var(--space-2) 0;
+}
+
+.medical-disclaimer {
+  font-size: var(--font-xs);
+  color: var(--wellness-secondary-text);
+  margin: 0;
+  line-height: var(--line-relaxed);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Footer Responsive Design */
+@media (max-width: 640px) {
+  .footer-links {
+    flex-direction: column;
+    gap: var(--space-3);
+    align-items: center;
+  }
+
+  .footer-link {
+    padding: var(--space-1) 0;
   }
 }
 

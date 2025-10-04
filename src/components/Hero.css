@@ -1,3 +1,60 @@
+/* Fixed Header Stripe */
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid rgba(139, 195, 74, 0.2);
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding: 0;
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) 0;
+  width: 100%;
+}
+
+.header-nav .nav-brand .brand-name {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: var(--font-regular);
+  font-style: italic;
+  color: var(--wellness-primary-text);
+  margin: 0;
+  padding: 0;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.header-nav .nav-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.header-nav .nav-btn {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--font-sm);
+  font-weight: var(--font-medium);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  transition: var(--transition-fast);
+  white-space: nowrap;
+}
+
 /* Hero Section Styles */
 .hero {
   position: relative;
@@ -6,6 +63,7 @@
   align-items: center;
   overflow: visible;
   padding: var(--space-2) 0;
+  margin-top: 80px; /* Add margin to account for fixed header */
 }
 
 .hero-background {
@@ -30,6 +88,8 @@
               radial-gradient(circle at 40% 80%, rgba(139, 195, 74, 0.05) 0%, transparent 50%);
   z-index: -1;
 }
+
+/* Navigation Container - Removed since we now use fixed header */
 
 /* Hero Container with reduced padding */
 .hero-container {
@@ -58,7 +118,6 @@
   align-items: center;
   justify-content: space-between;
   padding: var(--space-2) 0;
-  margin-bottom: var(--space-4);
   width: 100%;
 }
 
@@ -152,7 +211,7 @@
 
 .brand-styled {
   font-family: var(--font-serif);
-  font-size: inherit;
+  font-size: 1.2em;
   font-weight: var(--font-regular);
   font-style: italic;
   color: var(--wellness-primary-text);
@@ -164,6 +223,16 @@
 }
 
 .hero-subtitle {
+  font-size: var(--font-lg);
+  line-height: var(--line-relaxed);
+  color: var(--wellness-secondary-text);
+  margin-bottom: var(--space-4);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-description {
   font-size: var(--font-lg);
   line-height: var(--line-relaxed);
   color: var(--wellness-secondary-text);
@@ -253,6 +322,15 @@
   z-index: 3;
   margin-top: var(--space-8);
   margin-left: -3rem; /* Overlap the phones */
+}
+
+.screenshot-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  object-fit: contain;
+  object-position: center;
+  display: block;
 }
 
 .screenshot-image {
@@ -431,12 +509,42 @@
     padding: var(--space-6) 0;
   }
 
-  .phone-mockup {
-    max-width: 350px;
+  .hero-content {
+    gap: var(--space-8);
   }
 
   .hero-cta {
     gap: var(--space-6);
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-content {
+    gap: var(--space-12);
+  }
+
+  .dual-phone-mockup {
+    max-width: 550px;
+  }
+
+  .phone-container {
+    width: 260px;
+    height: 552px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .dual-phone-mockup {
+    max-width: 600px;
+  }
+
+  .phone-container {
+    width: 280px;
+    height: 595px;
+  }
+
+  .phone-right {
+    margin-left: -3.5rem;
   }
 }
 
@@ -480,6 +588,37 @@
 }
 
 @media (max-width: 640px) {
+  .header-container {
+    padding: 0 12px;
+  }
+
+  .header-nav {
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: var(--space-2) 0;
+  }
+
+  .header-nav .nav-brand .brand-name {
+    font-size: 1.5rem;
+  }
+
+  .header-nav .nav-actions {
+    gap: var(--space-2);
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .header-nav .nav-btn {
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--font-xs);
+    min-height: 36px;
+    min-width: 100px;
+  }
+
+  .hero {
+    margin-top: 100px; /* Adjust for smaller header */
+  }
+
   .hero-nav {
     flex-direction: column;
     gap: var(--space-3);

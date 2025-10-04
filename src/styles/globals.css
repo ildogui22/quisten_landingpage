@@ -24,6 +24,13 @@ body {
   background-color: var(--wellness-bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  margin: 0;
+  padding: 0;
 }
 
 /* Typography Hierarchy */
@@ -166,6 +173,20 @@ img {
 @media (min-width: 1024px) {
   .container {
     padding: 0 var(--space-4);
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1400px;
+    padding: 0 var(--space-6);
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1600px;
+    padding: 0 var(--space-8);
   }
 }
 

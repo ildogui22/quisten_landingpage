@@ -207,6 +207,10 @@
   object-fit: contain;
   object-position: center;
   display: block;
+  /* Remove white background from the phone mockup images */
+  background: transparent;
+  mix-blend-mode: multiply;
+  filter: contrast(1.2) brightness(0.9);
 }
 
 .phone-mockup-image:hover {

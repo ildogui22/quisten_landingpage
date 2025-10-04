@@ -1,0 +1,146 @@
+.page-container {
+  min-height: 100vh;
+  background-color: #F8F8F8;
+  padding: 60px 20px;
+  position: relative;
+}
+
+.home-button {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #8BC34A;
+  text-decoration: none;
+  padding: 12px 24px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin: 0 auto 40px;
+  max-width: fit-content;
+}
+
+.home-button:hover {
+  background-color: #8BC34A;
+  color: white;
+  box-shadow: 0 4px 12px rgba(139, 195, 74, 0.3);
+  transform: translateY(-2px);
+}
+
+.page-content {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 60px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.page-title {
+  font-family: 'Instrument Serif', serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #2D2D2D;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.last-updated {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  color: #666;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.section-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #2D2D2D;
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+
+.paragraph {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #4A4A4A;
+  margin-bottom: 20px;
+}
+
+.bullet-list {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #4A4A4A;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.bullet-list li {
+  margin-bottom: 12px;
+}
+
+.contact-email {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #8BC34A;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.contact-email a {
+  color: #8BC34A;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-email a:hover {
+  color: #7CB342;
+  text-decoration: underline;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .page-content {
+    padding: 40px 30px;
+  }
+
+  .page-title {
+    font-size: 36px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .paragraph,
+  .bullet-list {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-container {
+    padding: 40px 15px;
+  }
+
+  .page-content {
+    padding: 30px 20px;
+  }
+
+  .page-title {
+    font-size: 28px;
+  }
+
+  .section-title {
+    font-size: 18px;
+    margin-top: 32px;
+  }
+}
