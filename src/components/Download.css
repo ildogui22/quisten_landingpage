@@ -556,7 +556,7 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .download {
-    padding: var(--space-6) var(--space-4);
+    padding: var(--space-12) var(--space-4);
     min-height: auto;
   }
 
@@ -565,17 +565,23 @@
   }
 
   .download-header {
-    margin-bottom: var(--space-8);
+    margin-bottom: var(--space-10);
     padding: 0;
   }
 
   .download-title {
     font-size: clamp(var(--font-xl), 6vw, var(--font-3xl));
+    line-height: 1.3;
   }
 
   .download-subtitle {
-    font-size: var(--font-base);
+    font-size: var(--font-lg);
+    line-height: 1.7;
     padding: 0;
+  }
+
+  .app-store-badge-image {
+    height: 90px; /* Increased from 80px */
   }
 
   /* Waitlist Section */
@@ -1224,21 +1230,27 @@
 
 @media (max-width: 640px) {
   .download {
-    padding: var(--space-4) var(--space-3);
+    padding: var(--space-10) var(--space-4);
   }
 
   .download-header {
-    margin-bottom: var(--space-6);
+    margin-bottom: var(--space-8);
     padding: 0;
   }
 
   .download-title {
     font-size: clamp(var(--font-lg), 7vw, var(--font-2xl));
+    line-height: 1.3;
   }
 
   .download-subtitle {
-    font-size: var(--font-sm);
+    font-size: var(--font-base);
+    line-height: 1.7;
     padding: 0;
+  }
+
+  .app-store-badge-image {
+    height: 100px; /* Increased from 80px */
   }
 
   .pricing-comparison {
@@ -1305,8 +1317,8 @@
 .footer-links {
   display: flex;
   justify-content: center;
-  gap: var(--space-6);
-  margin-bottom: var(--space-4);
+  gap: var(--space-8);
+  margin-bottom: var(--space-6);
   flex-wrap: wrap;
 }
 
@@ -1315,6 +1327,10 @@
   color: var(--wellness-secondary-text);
   text-decoration: none;
   transition: var(--transition-fast);
+  padding: var(--space-2);
+  min-height: 48px;
+  display: flex;
+  align-items: center;
 }
 
 .footer-link:hover {
@@ -1348,18 +1364,24 @@
 @media (max-width: 640px) {
   .footer-links {
     flex-direction: column;
-    gap: var(--space-3);
+    gap: var(--space-4);
     align-items: center;
   }
 
   .footer-link {
-    padding: var(--space-1) 0;
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--font-lg);
+    min-height: 52px;
+  }
+
+  .copyright {
+    font-size: var(--font-base);
   }
 }
 
 @media (max-width: 480px) {
   .download {
-    padding: var(--space-3) var(--space-2);
+    padding: var(--space-8) var(--space-4);
   }
 
   .download-header {
@@ -1367,12 +1389,18 @@
   }
 
   .download-title {
-    font-size: clamp(var(--font-base), 6vw, var(--font-lg));
+    font-size: clamp(var(--font-lg), 6vw, var(--font-xl));
+    line-height: 1.3;
   }
 
   .download-subtitle {
-    font-size: var(--font-xs);
+    font-size: var(--font-base);
+    line-height: 1.7;
     padding: 0;
+  }
+
+  .app-store-badge-image {
+    height: 110px;
   }
 
   .plan-card {

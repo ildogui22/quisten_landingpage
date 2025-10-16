@@ -161,62 +161,62 @@ img {
   width: 100%;
   max-width: var(--container-xl);
   margin: 0 auto;
-  padding: 0 var(--space-2); /* Reduced horizontal padding */
+  padding: 0 var(--space-4); /* Increased from space-2 to space-4 (20px) */
 }
 
 @media (min-width: 640px) {
   .container {
-    padding: 0 var(--space-3);
+    padding: 0 var(--space-5);
   }
 }
 
 @media (min-width: 1024px) {
   .container {
-    padding: 0 var(--space-4);
+    padding: 0 var(--space-6);
   }
 }
 
 @media (min-width: 1280px) {
   .container {
     max-width: 1400px;
-    padding: 0 var(--space-6);
+    padding: 0 var(--space-8);
   }
 }
 
 @media (min-width: 1536px) {
   .container {
     max-width: 1600px;
-    padding: 0 var(--space-8);
+    padding: 0 var(--space-10);
   }
 }
 
 /* Sections */
 section {
-  padding: var(--space-4) 0; /* Mobile-first approach */
+  padding: var(--space-8) 0; /* Increased from space-4 to space-8 */
 }
 
 @media (min-width: 640px) {
   section {
-    padding: var(--space-6) 0;
+    padding: var(--space-10) 0;
   }
 }
 
 @media (min-width: 768px) {
   section {
-    padding: var(--space-8) 0;
+    padding: var(--space-12) 0;
   }
 }
 
 @media (min-width: 1024px) {
   section {
-    padding: var(--space-10) 0;
+    padding: var(--space-16) 0;
   }
 }
 
 /* Grid System */
 .grid {
   display: grid;
-  gap: var(--space-4); /* Reduced gap */
+  gap: var(--space-6); /* Increased from space-4 to space-6 */
 }
 
 .grid-cols-1 {
@@ -331,45 +331,47 @@ section {
   a[role="button"],
   input[type="submit"],
   input[type="button"] {
-    min-height: 44px;
-    min-width: 44px;
+    min-height: 48px; /* Increased from 44px */
+    min-width: 48px;
   }
 
   /* Mobile typography enhancements */
   body {
-    font-size: var(--font-base);
-    line-height: var(--line-relaxed);
+    font-size: var(--font-base); /* Keep at 16px minimum */
+    line-height: 1.7; /* Increased from 1.6 for better readability */
   }
 
   h1 {
     font-size: clamp(var(--font-2xl), 6vw, var(--font-4xl));
-    line-height: var(--line-tight);
-    margin-bottom: var(--space-3);
+    line-height: 1.3; /* Increased from line-tight */
+    margin-bottom: var(--space-4);
   }
 
   h2 {
     font-size: clamp(var(--font-xl), 5vw, var(--font-3xl));
-    margin-bottom: var(--space-3);
+    line-height: 1.3;
+    margin-bottom: var(--space-4);
   }
 
   h3 {
     font-size: clamp(var(--font-lg), 4vw, var(--font-2xl));
-    margin-bottom: var(--space-2);
+    line-height: 1.3;
+    margin-bottom: var(--space-3);
   }
 
   p {
-    margin-bottom: var(--space-3);
-    line-height: var(--line-relaxed);
+    margin-bottom: var(--space-4);
+    line-height: 1.7; /* Increased from 1.6 */
   }
 
   /* Improved spacing for mobile */
   .container {
-    padding: 0 var(--space-3);
+    padding: 0 var(--space-4);
   }
 
   /* Better button spacing */
   .btn {
-    padding: var(--space-3) var(--space-4);
+    padding: var(--space-3) var(--space-5);
     font-size: var(--font-base);
   }
 
@@ -381,29 +383,37 @@ section {
 
 @media (max-width: 480px) {
   .container {
-    padding: 0 var(--space-4);
+    padding: 0 var(--space-5);
   }
 
   /* Extra small screen optimizations */
   body {
-    font-size: var(--font-sm);
+    font-size: var(--font-base); /* Keep at 16px minimum */
+    line-height: 1.7;
   }
 
   h1 {
     font-size: clamp(var(--font-xl), 7vw, var(--font-3xl));
+    line-height: 1.3;
   }
 
   h2 {
     font-size: clamp(var(--font-lg), 6vw, var(--font-2xl));
+    line-height: 1.3;
   }
 
   h3 {
     font-size: clamp(var(--font-base), 5vw, var(--font-xl));
+    line-height: 1.3;
+  }
+
+  p {
+    line-height: 1.7;
   }
 
   .btn {
-    padding: var(--space-2) var(--space-3);
-    font-size: var(--font-sm);
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--font-base);
   }
 }
 

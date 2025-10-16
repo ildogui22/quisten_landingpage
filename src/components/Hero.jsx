@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Hero.css';
 
 const Hero = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <>
       {/* Fixed Header Stripe */}
@@ -11,7 +13,9 @@ const Hero = () => {
             <div className="nav-brand">
               <h3 className="brand-name">Quisten</h3>
             </div>
-            <div className="nav-actions">
+
+            {/* Desktop Navigation */}
+            <div className="nav-actions nav-desktop">
               <a href="#how-it-works" className="btn btn-primary nav-btn">
                 How It Works
               </a>
@@ -19,7 +23,40 @@ const Hero = () => {
                 Download App
               </a>
             </div>
+
+            {/* Mobile Hamburger */}
+            <button
+              className="mobile-menu-toggle"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              <span className={`hamburger ${mobileMenuOpen ? 'open' : ''}`}>
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </button>
           </nav>
+
+          {/* Mobile Menu Dropdown */}
+          {mobileMenuOpen && (
+            <div className="mobile-menu">
+              <a
+                href="#how-it-works"
+                className="mobile-menu-link"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                How It Works
+              </a>
+              <a
+                href="#download"
+                className="mobile-menu-link"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Download App
+              </a>
+            </div>
+          )}
         </div>
       </header>
 
